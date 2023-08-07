@@ -102,6 +102,7 @@ public final class DropDown: UIView {
         return imgv
     }()
 
+    public var textAlign = NSTextAlignment.center
 
 	/// The view to which the drop down will displayed onto.
 	public weak var anchorView: AnchorView? {
@@ -1075,6 +1076,7 @@ extension DropDown: UITableViewDataSource, UITableViewDelegate {
 		
 		cell.optionLabel.textColor = textColor
 		cell.optionLabel.font = textFont
+        cell.optionLabel.textAlignment = textAlign
 		cell.selectedBackgroundColor = selectionBackgroundColor
         cell.highlightTextColor = selectedTextColor
         cell.normalTextColor = textColor
